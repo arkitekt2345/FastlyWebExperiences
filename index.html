@@ -83,12 +83,12 @@
 		
 		function initXR() {
 		//Initial Button they will see when loading into the screen
-		xrButton = new WebXRButton({
-		  onRequestSession: onRequestSession,
-		  onEndSession: onEndSession,
-		  textEnterXRTitle: "Start AR",
-		  textXRNotFoundTitle: "AR Not Available",
-		  textExitXRTitle: "End AR session",
+		  xrButton = new WebXRButton({
+		    onRequestSession: onRequestSession,
+		    onEndSession: onEndSession,
+		    textEnterXRTitle: "Start AR",
+		    textXRNotFoundTitle: "AR Not Available",
+		    textExitXRTitle: "End AR session",
 		  });
 
 		  document.querySelector('header').appendChild(xrButton.domElement);
@@ -97,8 +97,8 @@
 			navigator.xr.isSessionSupported('immersive-ar')
 						.then((supported) => {
                            
-                            xrButton.enabled = supported;
-                              });
+                        xrButton.enabled = supported;
+                     });
                  
 		  }	 					
 			
